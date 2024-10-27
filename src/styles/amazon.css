@@ -1,0 +1,14 @@
+.warning{
+    height: 40px;
+    width: 250px;
+    position: fixed;
+    z-index: 100;
+    right: 0;
+    top: 10%;
+    background-color: rgb(210, 91, 91);
+    font-size: 1.1rem;
+    color: white;
+
+    padding: 5px;
+    border-radius: 5px;
+}

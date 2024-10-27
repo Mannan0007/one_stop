@@ -1,0 +1,67 @@
+.topContent img{
+    height: 460px;
+
+}
+.topContent{
+    display: flex;
+    gap: 20px;
+
+
+}
+
+.anotherheading{
+  text-align: center;
+}
+
+
+.ipl{
+
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+
+}
+.ipl img{
+  height: 440px;
+}
+.toppicks{
+  display: flex;
+}
+.toppicks img{
+  height: 410px;
+}
+
+
+.scrollContainer {
+    overflow-x: auto;
+    white-space: nowrap;
+}
+.contentWrapper {
+    position: relative;
+  }
+  
+  .scrollButton {
+    color: rgb(74, 86, 98);
+    text-shadow: 14px 4px 14px rgb(77, 106, 135);
+    outline: 1px solid white; /* Outline to simulate border */
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+
+    border-radius: 40px;
+    font-size: 54px;
+    cursor: pointer;
+    z-index: 1; /* Ensure buttons are above images */
+  }
+  
+  .scrollButton:first-child {
+    left: 10px;
+  }
+  
+  .scrollButton:last-child {
+    right: 10px;
+  }
+  

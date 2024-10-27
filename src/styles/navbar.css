@@ -1,0 +1,107 @@
+
+nav{
+    width: 100%;
+    height: 120px;
+    background-color: gold;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+.nav_box{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav_box img{
+    height: 110px;
+}
+.mainlogo{
+    position: relative;
+    left: -130px;
+    cursor: pointer;
+}
+.mainlogo img{
+    width: 40px;
+}
+.searchbar{
+    height: 40px;
+    width: 300px;
+    background-color: rgb(235, 230, 230);
+    border-radius: 15px;
+    position: relative;
+    /* right: -90px; */
+}
+.mainlinks a{
+    text-decoration: dotted;
+
+}
+
+.mainlinks ul{
+    display: flex;
+    gap: 50px;
+    /* justify-content: center; */
+    /* text-align: center; */
+    position: relative;
+    font-size: 20px;
+
+}
+
+
+.cart{
+    cursor: pointer;
+}
+
+.cart span:nth-child(1){
+    position: relative;
+    right: -280px;
+    font-size: 3rem;
+    color: black;
+}
+
+.cart span:nth-child(2){
+    padding: 0 3px;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    position: relative;
+    top: -15px;
+    right: -280px;
+}
+
+.log{
+    background-color: whitesmoke;
+    position: relative;
+    left: -50px;
+    width: 130px;
+    height: 40px;
+    border-radius: 10px;
+}
+.log:hover{
+    background-color:lightgreen;
+
+    cursor: pointer;
+}
+.dark-mode {
+    background-color: #121212; /* Dark background color */
+    color: #ffffff; /* White text color */
+}
+
+
+.dark-mode nav{
+    color: #121212;
+}
+.dark-mode body {
+    background-color: #121212; /* Dark background color */
+    color: #ffffff; /* White text color */
+}
+.dm{
+    height: 45px;
+    width: 120px;
+    border-radius: 20px;
+}
+.dm:hover{
+    background-color: lightgreen;
+}
