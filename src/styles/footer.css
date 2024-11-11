@@ -1,49 +1,73 @@
 .footer {
-    width: 300px;
-    background-color: black;
-    
-    padding: 20px 0;
-    text-align: center
+  width: 100%; /* Change width to 100% for full responsiveness */
+  max-width: 300px; /* Maintain a max width */
+  background-color: black;
+  padding: 20px 0;
+  text-align: center;
+  margin: 0 auto; /* Center the footer on larger screens */
 }
 
 .footer-content {
-    display: flex;
-    height: 140px;
-    margin: 0 auto;
-    gap: 240px;
-    align-items: center;
-    text-align: center;
-    background-color: black;
+  display: flex;
+  height: auto; /* Allow height to adjust based on content */
+  margin: 0 auto;
+  gap: 240px; /* Large gap for larger screens */
+  align-items: center;
+  text-align: center;
+  background-color: black;
+}
+
+.footer-content p {
+  color: white;
+  margin: 0;
+}
+
+.footer-content ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-content ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.footer-content ul li:last-child {
+  margin-right: 0;
+}
+
+.footer-content ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-content ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .footer {
+      padding: 15px; /* Reduce padding on smaller screens */
+      width: auto; /* Allow full width on smaller screens */
+      max-width: none; /* Remove max width restriction */
   }
-  
-  .footer-content p {
-    
-    text-align: center;
-    color: white;
-    margin: 0;
+
+  .footer-content {
+      flex-direction: column; /* Stack items vertically */
+      gap: 20px; /* Reduce gap between items */
+      align-items: center; /* Center items */
+      height: auto; /* Allow height to adjust based on content */
   }
-  
-  .footer-content ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-  
+
   .footer-content ul li {
-    display: inline-block;
-    margin-right: 20px;
+      display: block; /* Stack list items vertically */
+      margin-right: 0; /* Remove right margin */
+      margin-bottom: 10px; /* Add bottom margin for spacing */
   }
-  
+
   .footer-content ul li:last-child {
-    margin-right: 0;
+      margin-bottom: 0; /* Remove bottom margin for last item */
   }
-  
-  .footer-content ul li a {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  .footer-content ul li a:hover {
-    text-decoration: underline;
-  }
-  
+}

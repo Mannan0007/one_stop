@@ -1,84 +1,126 @@
-section{
-    gap: 30px;
+section {
     display: flex;
-    /* width: 80%; */
-    margin: auto;
-    padding: 10px;
+    gap: 30px; /* Space between cards */
+    margin: auto; /* Center the section */
+    padding: 10px; /* Padding around the section */
+    overflow-x: auto; /* Enable horizontal scrolling if needed */
 }
 
-.card{
-
-    width: 300px;
-    padding: 20px;
-   
-}
-.card:hover{
-    box-shadow: 0 10px 10px 10px rgba(0,0,0,0.1);
-    cursor: pointer;
+.card {
+    width: 300px; /* Fixed width for cards */
+    padding: 20px; /* Inner padding for cards */
+    transition: box-shadow 0.3s ease; /* Smooth transition for hover effect */
 }
 
-.image_box{
+.card:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Enhanced shadow on hover */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.image_box {
     display: flex;
-    gap: 50px;
-}
-.image_box img{
-    width: 300px;
-    height: 380px;
-}
-.details p:nth-child(1){
-    font-weight: bold;
-}
-.details p:nth-child(2){
-    color: grey;
-    font-size: 0.8rem;
-}
-.details p:nth-child(3){
-    font-weight: bold;
-    color: grey;
-}
-.details button{
-    padding: 5px 10px;
-    border: none;
-    font-weight: bold;
-    background-color: skyblue;
-    outline: none;
-    border-radius: 2px;
+    gap: 50px; /* Space between images */
 }
 
+.image_box img {
+    width: 100%; /* Responsive width for images */
+    height: auto; /* Maintain aspect ratio of images */
+}
 
+.details p:nth-child(1) {
+    font-weight: bold; /* Bold text for the first detail */
+}
+
+.details p:nth-child(2) {
+    color: grey; /* Grey color for secondary text */
+    font-size: 0.8rem; /* Smaller font size for secondary text */
+}
+
+.details p:nth-child(3) {
+    font-weight: bold; /* Bold text for price or important details */
+    color: grey; /* Grey color for price details */
+}
+
+.details button {
+    padding: 5px 10px; /* Padding inside buttons */
+    border: none; /* No border for buttons */
+    font-weight: bold; /* Bold text in buttons */
+    background-color: skyblue; /* Button background color */
+    outline: none; /* Remove outline on focus */
+    border-radius: 2px; /* Rounded corners for buttons */
+}
+
+/* Scroll container styles */
 .scrollContainer {
-    overflow-x: auto;
-    white-space: nowrap;
-    
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Keep items in a single line */
 }
 
-  
-  .scrollButton {
-    color: rgb(74, 86, 98);
-    text-shadow: 14px 4px 14px rgb(77, 106, 135);
+/* Scroll button styles */
+.scrollButton {
+    color: rgb(74, 86, 98); /* Button text color */
+    text-shadow: 14px 4px 14px rgb(77, 106, 135); /* Text shadow effect */
     outline: 1px solid white; /* Outline to simulate border */
     justify-content: center;
     text-align: center;
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: transparent;
-
-    border-radius: 40px;
-    font-size: 54px;
-    cursor: pointer;
+    top: 50%; 
+    transform: translateY(-50%); 
+    background-color: transparent; 
+    border-radius: 40px; 
+    font-size: 54px; /* Default button size */
+    cursor: pointer; 
     z-index: 1; /* Ensure buttons are above images */
-  }
-  
-  .scrollButton:first-child {
-    left: 10px;
-  }
-  
-  .scrollButton:last-child {
-    right: 10px;
-  }
-  
+}
+
+.scrollButton:first-child {
+    left: 10px; /* Position for left button */
+}
+
+.scrollButton:last-child {
+    right: 10px; /* Position for right button */
+}
+
+/* Responsive styling for various screen sizes */
+
+@media (max-width: 1024px) {
+   section {
+       padding: 5px; /* Reduce padding on medium screens */
+   }
+   .card {
+       width: 250px; /* Adjust card width for medium screens */
+   }
+   .scrollButton {
+       font-size: 40px; /* Reduce button size for medium screens */
+   }
+}
+
+@media (max-width: 768px) {
+   section {
+       flex-direction: column; /* Stack cards vertically on smaller screens */
+       align-items: center; 
+   }
+   .card {
+       width: auto; /* Allow cards to take full width on small screens */
+       margin-bottom: 20px; /* Space between stacked cards */
+   }
+   .scrollButton {
+       font-size: 30px; /* Reduce button size further on smaller screens */
+   }
+}
+
+@media (max-width: 480px) {
+   .card {
+       padding: 15px; /* Reduce padding inside cards on mobile devices */
+   }
+   .details button {
+       padding: 5px; /* Adjust button padding for mobile devices */
+   }
+}
 
 
-
-
+@media (max-width: 768px) {
+    .scrollButton {
+        display: none; /* Hide scroll buttons on smaller screens */
+    }
+}

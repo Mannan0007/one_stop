@@ -1,14 +1,41 @@
-.warning{
+/* Warning styling */
+.warning {
     height: 40px;
-    width: 250px;
+    width: 250px; /* Default width */
     position: fixed;
     z-index: 100;
     right: 0;
     top: 10%;
-    background-color: rgb(210, 91, 91);
-    font-size: 1.1rem;
-    color: white;
+    background-color: rgb(210, 91, 91); /* Warning background color */
+    font-size: 1.1rem; /* Default font size */
+    color: white; /* Text color */
+    padding: 5px; /* Padding around text */
+    border-radius: 5px; /* Rounded corners */
+    text-align: center; /* Center text */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    transition: opacity 0.3s ease; /* Smooth transition for visibility changes */
+}
 
-    padding: 5px;
-    border-radius: 5px;
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .warning {
+        width: 200px; /* Adjust width for medium screens */
+        font-size: 1rem; /* Reduce font size slightly */
+        top: 5%; /* Adjust top margin for more breathing room */
+    }
+}
+
+@media (max-width: 480px) {
+    .warning {
+        width: 180px; /* Narrow width for smaller screens */
+        font-size: 0.9rem; /* Further reduce font size */
+        top: 5%; /* Further refine positioning */
+    }
+}
+
+/* Scroll button hiding */
+@media (max-width: 780px) {
+    .scrollButton {
+        display: none; /* Hide scroll buttons on smaller screens */
+    }
 }

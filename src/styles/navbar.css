@@ -1,5 +1,5 @@
-
-nav{
+/* General nav styling */
+nav {
     width: 100%;
     height: 120px;
     background-color: gold;
@@ -7,101 +7,162 @@ nav{
     top: 0;
     z-index: 100;
 }
-.nav_box{
+
+.nav_box {
     width: 80%;
     margin: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.nav_box img{
+
+.nav_box img {
     height: 110px;
 }
-.mainlogo{
+
+.mainlogo {
     position: relative;
-    left: -130px;
+    left: -130px; /* Adjust this value based on your layout */
     cursor: pointer;
 }
-.mainlogo img{
+
+.mainlogo img {
     width: 40px;
 }
-.searchbar{
+
+.searchbar {
     height: 40px;
-    width: 300px;
+    width: 300px; /* Default width for larger screens */
     background-color: rgb(235, 230, 230);
     border-radius: 15px;
-    position: relative;
-    /* right: -90px; */
-}
-.mainlinks a{
-    text-decoration: dotted;
-
 }
 
-.mainlinks ul{
+.mainlinks a {
+    text-decoration: dotted; /* Dotted underline for links */
+}
+
+.mainlinks ul {
     display: flex;
-    gap: 50px;
-    /* justify-content: center; */
-    /* text-align: center; */
+    gap: 50px; /* Space between navigation links */
     position: relative;
-    font-size: 20px;
-
+    font-size: 20px; /* Default font size */
 }
 
-
-.cart{
-    cursor: pointer;
+.cart {
+    cursor: pointer; /* Pointer cursor for cart */
 }
 
-.cart span:nth-child(1){
-    position: relative;
-    right: -280px;
-    font-size: 3rem;
+.cart span:nth-child(1) {
+    font-size: 3rem; /* Large font size for cart icon */
     color: black;
 }
 
-.cart span:nth-child(2){
-    padding: 0 3px;
-    background-color: red;
-    color: white;
-    font-weight: bold;
-    border-radius: 5px;
-    position: relative;
-    top: -15px;
-    right: -280px;
+.cart span:nth-child(2) {
+    padding: 0 3px; /* Padding for notification badge */
+    background-color: red; /* Badge background color */
+    color: white; /* Badge text color */
+    font-weight: bold; /* Bold text for badge */
+    border-radius: 5px; /* Rounded corners for badge */
+    position: absolute; /* Positioning for badge */
+    top: -10px; /* Adjust vertical position */
+    right: -30px; /* Adjust horizontal position */
 }
 
-.log{
-    background-color: whitesmoke;
-    position: relative;
-    left: -50px;
-    width: 130px;
-    height: 40px;
-    border-radius: 10px;
+.log {
+    background-color: whitesmoke; /* Background color for log button */
+    width: 130px; /* Fixed width for log button */
+    height: 40px; /* Fixed height for log button */
+    border-radius: 10px; /* Rounded corners for log button */
+    display: flex;
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
 }
-.log:hover{
-    background-color:lightgreen;
 
-    cursor: pointer;
+.log:hover {
+    background-color: lightgreen; /* Hover effect for log button */
 }
+
+/* Dark mode styling */
 .dark-mode {
-    background-color: #121212; /* Dark background color */
-    color: #ffffff; /* White text color */
+    background-color: #121212;
+    color: #ffffff;
 }
 
-
-.dark-mode nav{
-    color: #121212;
+.dark-mode nav {
+    background-color: #121212; /* Dark mode nav background */
 }
+
 .dark-mode body {
-    background-color: #121212; /* Dark background color */
-    color: #ffffff; /* White text color */
+    background-color: #121212; 
 }
-.dm{
+
+/* Dark mode button styling */
+.dm {
     height: 45px;
     width: 120px;
     border-radius: 20px;
 }
-.dm:hover{
-    background-color: lightgreen;
+
+.dm:hover {
+    background-color: lightgreen; 
+}
+
+/* Responsive styles */
+
+/* For screens up to 1024px (tablets) */
+@media (max-width: 1024px) {
+   .nav_box {
+       width: 90%; 
+   }
+   .searchbar {
+       width: 250px; 
+   }
+   .mainlinks ul {
+       gap: 30px; 
+   }
+}
+
+/* For screens up to 768px (small tablets and large phones) */
+@media (max-width: 768px) {
+   nav {
+       height: 100px; 
+   }
+   .nav_box {
+       flex-direction: column; 
+       gap: 15px; 
+       align-items:center; /* Center items vertically on smaller screens */  
+   }
+   .mainlogo {
+       left :0 ;  
+   }
+   .searchbar {
+       width :200 px ;  
+       margin-top :10 px ;  
+   }
+   .mainlinks ul {
+       flex-direction : column ;  
+       font-size :18 px ;  
+       gap :15 px ;  
+   }
+   .cart span:nth-child(1) {
+       font-size :2 rem ;  
+   }
+}
+
+/* For screens up to 480px (mobile devices) */
+@media (max-width :480px) {
+
+   .searchbar {
+       width :100% ;  
+       margin-top :10 px ;  
+   }
+
+   .mainlinks ul {
+       gap :10 px ;  
+       font-size :16 px ;  
+   }
+
+   .cart span:nth-child(1) {
+       font-size :1.5 rem ;  
+   }
 }
